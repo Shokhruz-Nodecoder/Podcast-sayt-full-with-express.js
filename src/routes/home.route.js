@@ -5,6 +5,7 @@ const {
   listingPage,
   adminPage,
   formPage,
+  deletePage
 
 } = require("../controllers/home.controller");
 const isAuth = require("../middlewares/isAuth");
@@ -16,6 +17,6 @@ router.get("/detail-page", detailPage);
 router.get("/listing-page", listingPage);
 router.get("/admin", isAuth, adminPage);
 router.get('/form', isAuth, formPage);
-
+router.get("/deletepost", isAuth, deletePage);
 
 module.exports = router;

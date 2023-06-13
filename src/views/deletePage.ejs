@@ -374,20 +374,19 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="../../index.html">
+            <a class="nav-link" href="/">
               <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item nav-category">UI Elements</li>
-          <li class="nav-item">
-            <a class="nav-link"  href="/" aria-expanded="false" aria-controls="ui-basic">
-              <i class="menu-icon mdi mdi-floor-plan"></i>
               <span class="menu-title">Home</span>
-              <i class="menu-arrow"></i> 
             </a>
-         
-          </li>
+            <li class="nav-item nav-category">UI Elements</li>
+            <li class="nav-item">
+              <a class="nav-link"  href="/" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon mdi mdi-floor-plan"></i>
+                <span class="menu-title">Home</span>
+                <i class="menu-arrow"></i> 
+              </a>
+           
+            </li>
           <li class="nav-item nav-category">Forms and Datas</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
@@ -398,7 +397,7 @@
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"><a class="nav-link" href="#">Basic Elements</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Delete Elements</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#">Delete Elements</a></li> -->
               </ul>
             </div>
           </li>
@@ -410,24 +409,16 @@
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Add Teacher</h4>
+                  <h4 class="card-title">Delete Teacher</h4>
                   <p class="card-description">
-                    You can add a teacher
+                    You can delete a teacher
                   </p>
-                  <form class="forms-sample" action="/teacher" method="post" enctype="multipart/form-data">
+                  <form class="forms-sample" action="/admin/delete-teacher" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                      <label for="exampleInputUsername1">Name</label>
-                      <input type="text" name="name" class="form-control" id="exampleInputUsername1" placeholder="Teacher's name">
+                      <label for="exampleInputUsername1">Teacher Id</label>
+                      <input type="text" name="id" class="form-control" id="exampleInputUsername1" placeholder="Teacher's id">
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Image</label>
-                      <input type="file" name="image" class="form-control" id="exampleInputImage1" placeholder="Photo">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Field</label>
-                      <input type="text" name="field" class="form-control" id="exampleInputPassword1" placeholder="Field">
-                    </div>
-                
+                 
                 
                     <button type="submit" class="btn btn-primary me-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
@@ -438,24 +429,16 @@
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Add Topic</h4>
+                  <h4 class="card-title">Delete Topic</h4>
                   <p class="card-description">
-                   You can add topics
+                   You can delete topics
                   </p>
-                  <form class="forms-sample" method="post" action="/topic" enctype="multipart/form-data">
+                  <form class="forms-sample" method="post" action="/admin/delete-topics" enctype="multipart/form-data">
                     <div class="form-group">
-                      <label for="exampleInputUsername1">Image</label>
-                      <input type="file" name="image" class="form-control" id="exampleInputUsername1" placeholder="Image">
+                      <label for="exampleInputUsername1">Topic Id</label>
+                      <input type="text" name="id" class="form-control" id="exampleInputUsername1" placeholder="Topic's Id">
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Title</label>
-                      <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Title">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Epidodes</label>
-                      <input type="text" name="episodes" class="form-control" id="exampleInputPassword1" placeholder="Episodes">
-                    </div>
-                 
+                   
                  
                     <button type="submit" class="btn btn-primary me-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
@@ -466,35 +449,17 @@
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Add Trending episodes</h4>
+                  <h4 class="card-title">Delete Trending episodes</h4>
                   <p class="card-description">
-                   You can add trending episodes
+                   You can delete trending episodes
                   </p>
-                  <form class="forms-sample" method="post" action="/trend" enctype="multipart/form-data">
+                  <form class="forms-sample" method="post" action="/admin/delete-trend-episodes" enctype="multipart/form-data">
                     <div class="form-group">
-                      <label for="exampleInputUsername1">Image</label>
-                      <input type="file" name="image" class="form-control" id="exampleInputUsername1" placeholder="Image">
+                      <label for="exampleInputUsername1">Trend Id</label>
+                      <input type="text" name="id" class="form-control" id="exampleInputUsername1" placeholder="Trend's Id">
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">musicName</label>
-                      <input type="text" name="musicName" class="form-control" id="exampleInputEmail1" placeholder="musicName">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputUsername1">ProfileImage</label>
-                      <input type="file" name="ProfileImage" class="form-control" placeholder="ProfileImage">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">author</label>
-                      <input type="text" name="author" class="form-control" id="exampleInputPassword1" placeholder="Author">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">field</label>
-                      <input type="text" name="field" class="form-control" id="exampleInputPassword1" placeholder="Field">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">comment</label>
-                      <input type="text" name="comment" class="form-control" id="exampleInputPassword1" placeholder="Comment">
-                    </div>
+                  
+                  
                  
                  
                     <button type="submit" class="btn btn-primary me-2">Submit</button>

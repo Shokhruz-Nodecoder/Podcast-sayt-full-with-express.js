@@ -29,10 +29,15 @@ const formPage = async (req, res) => {
   res.render("form");
 };
 
+const deletePage = async (req, res) => {
+  res.render("deletePage")
+}
+
 module.exports = {
   home,
   detailPage,
   formPage,
   adminPage,
   listingPage,
+  deletePage
 };
